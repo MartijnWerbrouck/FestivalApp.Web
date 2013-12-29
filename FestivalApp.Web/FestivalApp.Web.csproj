@@ -185,18 +185,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LineUpController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Band.cs" />
+    <Compile Include="Models\DAL\BandRepository.cs" />
+    <Compile Include="Models\DAL\LineUpRepository.cs" />
+    <Compile Include="Models\DAL\StageRepository.cs" />
+    <Compile Include="Models\DAL\TicketRepository.cs" />
+    <Compile Include="Models\DAL\TicketTypeRepository.cs" />
+    <Compile Include="Models\LineUp.cs" />
+    <Compile Include="Models\Stage.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\TicketType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\TicketBeheerVM.cs" />
+    <Compile Include="ViewModels\TicketVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -255,6 +267,43 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\ahzee.jpg" />
+    <Content Include="Images\Bands\ahzee.jpg" />
+    <Content Include="Images\Bands\bastille.jpg" />
+    <Content Include="Images\Bands\beyonce.jpg" />
+    <Content Include="Images\Bands\blur.jpg" />
+    <Content Include="Images\Bands\coldplay.jpg" />
+    <Content Include="Images\Bands\daftpunk.jpg" />
+    <Content Include="Images\Bands\disclosure.jpg" />
+    <Content Include="Images\Bands\dizzeerascal.jpg" />
+    <Content Include="Images\Bands\djfresh.jpg" />
+    <Content Include="Images\Bands\ducksauce.jpg" />
+    <Content Include="Images\Bands\edsheeran.jpg" />
+    <Content Include="Images\Bands\elizadoolittle.jpg" />
+    <Content Include="Images\Bands\eminem.jpg" />
+    <Content Include="Images\Bands\florida.jpg" />
+    <Content Include="Images\Bands\gerspardoel.jpg" />
+    <Content Include="Images\Bands\goose.jpg" />
+    <Content Include="Images\Bands\greenday.jpg" />
+    <Content Include="Images\Bands\gymclassheroes.jpg" />
+    <Content Include="Images\Bands\herrvogel.jpg" />
+    <Content Include="Images\Bands\hofvancommerce.jpg" />
+    <Content Include="Images\Bands\jasonderulo.jpg" />
+    <Content Include="Images\Bands\johnlegend.jpg" />
+    <Content Include="Images\Bands\justintimberlake.jpg" />
+    <Content Include="Images\Bands\kingsofleon.jpg" />
+    <Content Include="Images\Bands\knifeparty.jpg" />
+    <Content Include="Images\Bands\maroon5.jpg" />
+    <Content Include="Images\Bands\murdock.jpg" />
+    <Content Include="Images\Bands\netsky.jpg" />
+    <Content Include="Images\Bands\rammstein.jpg" />
+    <Content Include="Images\Bands\rihanna.jpg" />
+    <Content Include="Images\Bands\snoopdogg.jpg" />
+    <Content Include="Images\Bands\theopposites.jpg" />
+    <Content Include="Images\Bands\theprodigy.jpg" />
+    <Content Include="Images\Bands\tlc.jpg" />
+    <Content Include="Images\Bands\tlp.jpg" />
+    <Content Include="Images\Bands\yellowclaw.jpg" />
     <Content Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -306,17 +355,16 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\LineUp\Index.cshtml" />
+    <Content Include="Views\LineUp\Details.cshtml" />
+    <Content Include="Views\LineUp\Reserveer.cshtml" />
+    <Content Include="Views\LineUp\TicketBeheer.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

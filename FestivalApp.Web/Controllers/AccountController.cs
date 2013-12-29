@@ -42,7 +42,7 @@ namespace FestivalApp.Web.Controllers
 
             // If we got this far, something failed, redisplay form
             ModelState.AddModelError("", "The user name or password provided is incorrect.");
-            return View(model);
+            return RedirectToAction("Index", "LineUp");
         }
 
         //
@@ -54,7 +54,7 @@ namespace FestivalApp.Web.Controllers
         {
             WebSecurity.Logout();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "LineUp");
         }
 
         //
@@ -81,7 +81,7 @@ namespace FestivalApp.Web.Controllers
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password, propertyValues: new { Email = model.Email });
                     WebSecurity.Login(model.UserName, model.Password);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "LineUp");
                 }
                 catch (MembershipCreateUserException e)
                 {

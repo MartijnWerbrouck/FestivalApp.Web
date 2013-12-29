@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FestivalApp.Model.LineUp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Line Up</h2>
+
+<p>
+    @if(!User.Identity.IsAuthenticated) {<p>Register of Login om te reserveren</p>}
+    else {
+        @Html.ActionLink("Reserveer", "Reserveer")
+    }
+</p>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.From)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Until)
+        </th>
+        <th>
+            Band
+        </th>
+        <th>
+            Stage
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.From)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Until)
+        </td>
+        <td>
+            <img src= "@Url.Content(item.Band.PictureURL)" alt="Loading" height="150" width="150" />
+            <br />
+            @Html.DisplayFor(modelItem => item.Band.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stage.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.ID })
+        </td>
+    </tr>
+}
+</table>

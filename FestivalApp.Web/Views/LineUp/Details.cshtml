@@ -1,0 +1,46 @@
+﻿@model FestivalApp.Model.LineUp
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Band</h2>
+
+<fieldset>
+    <legend>Band</legend>
+
+    <div class="display-field" style="margin-top:5px; margin-bottom:5px">
+        <img src="@Url.Content(Model.Band.PictureURL)" height="400" width="400" alt="Loading" />
+    </div>
+
+    <div class="display-label" style="margin-bottom:5px; font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Band.Description)
+    </div>
+    <div class="display-field" style="margin-bottom:5px;">
+        @Html.DisplayFor(model => model.Band.Description)
+    </div>
+
+    <div class="display-label" style="margin-bottom:5px; font-weight:bold;">
+         @Html.DisplayNameFor(model => model.From)
+    </div>
+    <div class="display-field" style="margin-bottom:5px;">
+        @Html.DisplayFor(model => model.From)
+    </div>
+
+    <div class="display-label" style="margin-bottom:5px; font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Until)
+    </div>
+    <div class="display-field" style="margin-bottom:5px;">
+        @Html.DisplayFor(model => model.Until)
+    </div>
+
+    <div class="display-label" style="margin-bottom:5px; font-weight:bold;">
+        <p>Stage</p>
+    </div>
+    <div class="display-field" style="margin-bottom:5px;">
+        @Html.DisplayFor(model => model.Stage.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

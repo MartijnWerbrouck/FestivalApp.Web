@@ -1,0 +1,71 @@
+﻿@model FestivalApp.Web.ViewModels.TicketBeheerVM
+
+@{
+    var aantal1 = Model.aTickets.ElementAt(0);
+    var aantal2 = Model.aTickets.ElementAt(1);
+    var aantal3 = Model.aTickets.ElementAt(2);
+    var aantal4 = Model.aTickets.ElementAt(3);
+}
+
+<h2>Ticketbeheer</h2>
+
+<h3>Reservaties</h3>
+<table>
+    <tr>
+        <th>
+            Naam
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Aantal
+        </th>
+    </tr>
+
+@foreach (var item in Model.Tickets) { 
+    <tr>
+        <td>
+            @Html.DisplayName(item.Ticketholder)
+        </td>
+        <td>
+            @Html.DisplayName(item.TicketType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+    </tr>
+}
+</table>
+
+<h3>Beschikbare tickets</h3>
+<table>
+    <tr>
+        <th>
+            Combi
+        </th>
+        <th>
+            Vrijdag
+        </th>
+        <th>
+            Zaterdag
+        </th>
+        <th>
+            Zondag
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @aantal1
+        </td>
+        <td>
+            @aantal2
+        </td>
+        <td>
+            @aantal3
+        </td>
+        <td>
+            @aantal4
+        </td>
+    </tr>
+</table>
