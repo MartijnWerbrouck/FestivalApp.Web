@@ -1,17 +1,22 @@
 ﻿@model IEnumerable<FestivalApp.Model.LineUp>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Search";
 }
 
-<h2>Line Up</h2>
+<h2>Search</h2>
 
-<p>
-    @if(!User.Identity.IsAuthenticated) {<p>Register of Login om te reserveren</p>}
-    else {
-        @Html.ActionLink("Reserveer", "Reserveer")
-    }
-</p>
+@using(Html.BeginForm("Search","LineUp",FormMethod.Get)) {
+
+<fieldset>
+    <legend>Vul de zoek gegevens in </legend>
+    <div>
+        <p>Artiest: @Html.TextBox("Artist")</p>
+        <p>Datum: @Html.TextBox("Date")</p>
+        <p>Stage: @Html.TextBox("Stage")</p>
+    </div>
+    <input type="submit" value="Search" />
+</fieldset>
 
 <table>
     <tr>
@@ -58,3 +63,4 @@
     </tr>
 }
 </table>
+}

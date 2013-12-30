@@ -21,6 +21,20 @@
     </div>
 
     <div class="display-label" style="margin-bottom:5px; font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Band.Facebook)
+    </div>
+    <div class="display-field" style="margin-bottom:5px;">
+        <a href="@Url.Content(Model.Band.Facebook)">@Html.Raw(Model.Band.Facebook)</a>
+    </div>
+
+    <div class="display-label" style="margin-bottom:5px; font-weight:bold;">
+         @Html.DisplayNameFor(model => model.Band.Twitter)
+    </div>
+    <div class="display-field" style="margin-bottom:5px;">
+        <a href="@Url.Content(Model.Band.Twitter)">@Html.Raw(Model.Band.Twitter)</a>
+    </div>
+
+    <div class="display-label" style="margin-bottom:5px; font-weight:bold;">
          @Html.DisplayNameFor(model => model.From)
     </div>
     <div class="display-field" style="margin-bottom:5px;">

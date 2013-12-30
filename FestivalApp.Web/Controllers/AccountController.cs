@@ -337,7 +337,7 @@ namespace FestivalApp.Web.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "LineUp");
             }
         }
 

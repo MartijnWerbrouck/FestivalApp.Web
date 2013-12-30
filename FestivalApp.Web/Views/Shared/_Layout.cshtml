@@ -9,10 +9,10 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <header>
+        <header style="background-color:darkcyan; height: 100px;">
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "LineUp")</p>
+                    <p class="site-title">@Html.ActionLink("Festival", "Index", "LineUp")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -20,6 +20,8 @@
                     </section>
                     <nav>
                         <ul id="menu">
+                            <li>@Html.ActionLink("Search", "Search", "LineUp")</li>
+                            <li>@Html.ActionLink("Tickets", "TicketsSucces", "LineUp")</li>
                             <li>@Html.ActionLink("Reserveer", "Reserveer", "LineUp")</li>
                             <li>@Html.ActionLink("Ticketbeheer", "TicketBeheer", "LineUp")</li>
                         </ul>

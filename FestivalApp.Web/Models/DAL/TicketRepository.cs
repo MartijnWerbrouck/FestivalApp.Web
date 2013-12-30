@@ -30,6 +30,18 @@ namespace FestivalApp.Web.Models.DAL
             }
             return (lijst);
         }
+        
+        public static List<Ticket> GetTicketsByName(string n) {
+            List<Ticket> rlijst = new List<Ticket>();
+            List<Ticket> lijst = GetTickets();
+
+            foreach (Ticket t in lijst) {
+                if (t.Ticketholder == n) {
+                    rlijst.Add(t);
+                }
+            }
+            return rlijst;
+        }
 
         public static void InsertTickets(Ticket t) {
             String sSQL = "INSERT INTO Ticket (Ticketholder, TicketholderEmail, TicketTypeID, Amount) VALUES (@Ticketholder, @TicketholderEmail, @TicketTypeID, @Amount)";
