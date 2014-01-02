@@ -35,6 +35,7 @@ namespace FestivalApp.Web.Models.DAL
 
                     lijst.Add(lu);
                 }
+                reader.Close();
             }
             return (lijst);
         }

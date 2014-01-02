@@ -23,6 +23,7 @@ namespace FestivalApp.Web.Models.DAL
                     s.Name = reader["Name"].ToString();
                     lijst.Add(s);
                 }
+                reader.Close();
             }
             return (lijst);
         }

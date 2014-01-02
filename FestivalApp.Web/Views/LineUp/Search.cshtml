@@ -8,7 +8,7 @@
 
 @using(Html.BeginForm("Search","LineUp",FormMethod.Get)) {
 
-<fieldset>
+<fieldset style="margin-bottom:50px;">
     <legend>Vul de zoek gegevens in </legend>
     <div>
         <p>Artiest: @Html.TextBox("Artist")</p>
@@ -20,19 +20,19 @@
 
 <table>
     <tr>
-        <th>
+        <th style="padding-right:100px;">
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.From)
         </th>
-        <th>
+        <th style="padding-right:100px;">
             @Html.DisplayNameFor(model => model.Until)
         </th>
-        <th>
+        <th style="padding-right:100px;">
             Band
         </th>
-        <th>
+        <th style="padding-right:100px;">
             Stage
         </th>
         <th></th>
@@ -40,21 +40,21 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td style="padding-right:100px;">
             @Html.DisplayFor(modelItem => item.Date)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.From)
         </td>
-        <td>
+        <td style="padding-right:100px;">
             @Html.DisplayFor(modelItem => item.Until)
         </td>
-        <td>
+        <td style="padding-right:100px;">
             <img src= "@Url.Content(item.Band.PictureURL)" alt="Loading" height="150" width="150" />
             <br />
             @Html.DisplayFor(modelItem => item.Band.Name)
         </td>
-        <td>
+        <td style="padding-right:100px;">
             @Html.DisplayFor(modelItem => item.Stage.Name)
         </td>
         <td>

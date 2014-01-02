@@ -25,6 +25,7 @@ namespace FestivalApp.Web.Models.DAL
                     tt.AvailableTickets = Convert.ToInt32(reader["AvailableTickets"].ToString());
                     lijst.Add(tt);
                 }
+                reader.Close();
             }
             return (lijst);
         }

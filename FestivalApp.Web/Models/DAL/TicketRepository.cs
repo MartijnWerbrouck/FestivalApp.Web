@@ -27,6 +27,7 @@ namespace FestivalApp.Web.Models.DAL
                     t.Amount = Convert.ToInt32(reader["Amount"].ToString());
                     lijst.Add(t);
                 }
+                reader.Close();
             }
             return (lijst);
         }

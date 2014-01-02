@@ -269,8 +269,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Images\A4 V-Festival background09 LANDSCAPE.jpg" />
-    <Content Include="Images\ahzee.jpg" />
     <Content Include="Images\Bands\ahzee.jpg" />
     <Content Include="Images\Bands\bastille.jpg" />
     <Content Include="Images\Bands\beyonce.jpg" />
@@ -335,7 +333,6 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\orderedList0.png" />

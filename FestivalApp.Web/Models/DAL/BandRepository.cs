@@ -31,6 +31,7 @@ namespace FestivalApp.Web.Models.DAL
                     b.Facebook = reader["Facebook"].ToString();
                     lijst.Add(b);
                 }
+                reader.Close();
             }
             return (lijst);
         }
